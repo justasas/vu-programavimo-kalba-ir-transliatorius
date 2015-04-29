@@ -1,0 +1,145 @@
+PROC_START,     ,               ,               a              
+FPARAM,         ,               ,               aa             
+STORE,          a,              int,                           
+RET,            a,              ,                              
+RET,            ,               ,                              
+PROC_START,     ,               ,               a2             
+FPARAM,         ,               ,               aa             
+STORE,          a,              char,                          
+RET,            a,              ,                              
+RET,            ,               ,                              
+PROC_START,     ,               ,               b              
+STORE,          a,              int,                           
+RET,            a,              ,                              
+RET,            ,               ,                              
+PROC_START,     ,               ,               fibonacci      
+FPARAM,         ,               ,               number         
+EE,             number,         $0,             _t0            
+JF,             _t0,            L0,                            
+RET,            $0,             ,                              
+JMP,            ,               ,               L1             
+LABEL,          ,               ,               L0             
+EE,             number,         $1,             _t1            
+JF,             _t1,            L2,                            
+RET,            $1,             ,                              
+JMP,            ,               ,               L3             
+LABEL,          ,               ,               L2             
+SUB,            number,         $2,             _t2            
+PARAM,          ,               ,               _t2            
+CALL,           _t3,            ,               fibonacci      
+SUB,            number,         $1,             _t4            
+PARAM,          ,               ,               _t4            
+CALL,           _t5,            ,               fibonacci      
+ADD,            _t5,            _t3,            _t6            
+RET,            _t6,            ,                              
+LABEL,          ,               ,               L3             
+LABEL,          ,               ,               L1             
+RET,            ,               ,                              
+PROC_START,     ,               ,               g              
+FPARAM,         *,              ,               c              
+PULL,           c,              $5,             _t7            
+WRITE,          int,            _t7,                           
+MOVA,           c,              $5,             $4444          
+MOVA,           c,              $3,             $5555          
+RET,            ,               ,                              
+PROC_START,     ,               ,               f              
+FPARAM,         *,              ,               b              
+PULL,           b,              $5,             _t8            
+WRITE,          int,            _t8,                           
+MOVA,           b,              $5,             $1111          
+PARAM,          *,              ,               b              
+CALL,           ,               ,               g              
+RET,            ,               ,                              
+PROC_START,     ,               ,               fib            
+FPARAM,         ,               ,               number         
+ADD,            number,         $1,             _t9            
+STORA,          tmp,            int,            _t9            
+MOVA,           tmp,            $0,             $0             
+MOVA,           tmp,            $1,             $1             
+STORE,          i,              int,                           
+MOV,            i,              $2,                            
+LABEL,          ,               ,               L4             
+LE,             i,              number,         _t10           
+JF,             _t10,           L5,                            
+SUB,            i,              $1,             _t11           
+PULL,           tmp,            _t11,           _t12           
+SUB,            i,              $2,             _t13           
+PULL,           tmp,            _t13,           _t14           
+ADD,            _t14,           _t12,           _t15           
+MOVA,           tmp,            i,              _t15           
+LT,             i,              number,         _t10           
+JF,             _t10,           L5,                            
+ADD,            i,              $1,             _t16           
+MOV,            i,              _t16,                          
+JMP,            ,               ,               L4             
+LABEL,          ,               ,               L5             
+PULL,           tmp,            number,         _t17           
+RET,            _t17,           ,                              
+RET,            ,               ,                              
+PROC_START,     ,               ,               fun            
+FPARAM,         ,               ,               param          
+MUL,            param,          $2,             _t18           
+RET,            _t18,           ,                              
+RET,            ,               ,                              
+PROC_START,     ,               ,               factorial      
+FPARAM,         ,               ,               number         
+EE,             number,         $0,             _t19           
+JF,             _t19,           L6,                            
+RET,            $1,             ,                              
+JMP,            ,               ,               L7             
+LABEL,          ,               ,               L6             
+SUB,            number,         $1,             _t20           
+PARAM,          ,               ,               _t20           
+CALL,           _t21,           ,               factorial      
+MUL,            _t21,           number,         _t22           
+RET,            _t22,           ,                              
+LABEL,          ,               ,               L7             
+RET,            ,               ,                              
+MAIN_START,     ,               ,                              
+PARAM,          ,               ,               $10            
+CALL,           _t23,           ,               factorial      
+WRITE,          int,            _t23,                          
+PARAM,          ,               ,               $33333         
+CALL,           _t24,           ,               fun            
+WRITE,          int,            _t24,                          
+STORE,          aaa,            int,                           
+STORE,          bbb,            int,                           
+STORE,          ccc,            int,                           
+MUL,            $2,             $3,             _t25           
+MUL,            _t25,           $4,             _t26           
+ADD,            _t26,           $5,             _t27           
+WRITE,          int,            _t27,                          
+STORA,          ar,             int,            $10            
+MOVA,           ar,             $5,             $2222          
+PARAM,          *,              ,               ar             
+CALL,           ,               ,               f              
+MOV,            aaa,            $0,                            
+LABEL,          ,               ,               L8             
+LE,             aaa,            $9,             _t28           
+JF,             _t28,           L9,                            
+PULL,           ar,             aaa,            _t29           
+WRITE,          int,            _t29,                          
+LT,             aaa,            $9,             _t28           
+JF,             _t28,           L9,                            
+ADD,            aaa,            $1,             _t30           
+MOV,            aaa,            _t30,                          
+JMP,            ,               ,               L8             
+LABEL,          ,               ,               L9             
+PARAM,          ,               ,               $5             
+CALL,           _t31,           ,               fib            
+STORE,          a,              float,                         
+MOV,            a,              $3.0,                          
+STORE,          c,              int,                           
+MOV,            c,              $5,                            
+MUL,            c,              $2,             _t32           
+ADD,            a,              _t32,           _t33           
+WRITE,          float,          _t33,                          
+PARAM,          ,               ,               $6             
+CALL,           _t34,           ,               fib            
+WRITE,          int,            _t34,                          
+MOV,            c,              $22,                           
+MUL,            $2,             $3,             _t35           
+ADD,            c,              _t35,           _t36           
+ADD,            _t36,           $1,             _t37           
+WRITE,          int,            _t37,                          
+MAIN_END,       ,               ,                              

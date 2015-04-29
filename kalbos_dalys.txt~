@@ -1,0 +1,16 @@
+83 - int
+84 - float
+85 - char
+86 - bool
+87 - if
+88 - for
+89 - while
+90 - main
+91 - else
+92 - write
+93 - writeLine
+94 - read
+95 - return
+96 - void
+97 - false
+98 - true

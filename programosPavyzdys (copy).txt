@@ -1,0 +1,105 @@
+int fibonacci(int number)
+{
+    if(number == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        if(number == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return fibonacci(number -1) + fibonacci(number - 2);
+        };
+    };
+}
+
+
+//-----------------------------------------------------------------------------
+
+void g(int c[])
+{
+    write(c[5]);
+    c[5] = 4444;
+    c[3] = 5555;
+}
+
+void f(int b[])
+{
+    write(b[5]);
+    b[5] = 1111;
+    g(b[]);
+}
+
+int fib(int number)
+{
+    int tmp[number + 1];
+    tmp[0] = 0;
+    tmp[1] = 1;
+    int i;
+    for(i = 2 to number)
+    {
+        tmp[i] = tmp[i - 2] + tmp[i - 1];
+    };
+    return tmp[number];
+}
+
+int fun(int param)
+{
+    return param * 2;
+}
+
+
+
+
+//-----------------------------------------------------------------------------
+
+int factorial(int number)
+{
+    if(number == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return factorial(number - 1) * number;
+    };
+
+}
+
+/*
+    Komentaras
+    Komentaras
+* /
+
+
+main
+{
+    write(factorial(10));
+       
+    write(fun(33333));
+    int aaa;
+    int bbb;
+    int ccc;
+    write(2 * 3 * 4 + 5);
+
+    int ar[10];
+    ar[5] = 2222;
+    f(ar[]);
+    for(aaa = 0 to 9)
+    {
+        write(ar[aaa]);
+    };
+    fib(5);
+    float a;
+    a = 3.0;
+    int c;
+    c = 5;
+    write(a + c * 2);
+    write(fib(6));
+    c = 22;
+    write(c + 2 * 3 + 1);     
+}              

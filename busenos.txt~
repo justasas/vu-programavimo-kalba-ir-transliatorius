@@ -1,0 +1,291 @@
+begin // busenos numeris :  0
+space NL tab CR --> 0
+0 1 2 3 4 5 6 7 8 9 --> 1
+. --> 3
++ --> 6
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z --> 12
+' --> 82
+" --> 86
+( --> 14
+) --> 16
+{ --> 18
+} --> 20
+[ --> 22
+] --> 24
+, --> 26
+/ --> 28
+- --> 35
+= --> 41
+; --> 45
+! --> 47
+< --> 51
+> --> 55
+* --> 59
+% --> 63
+& --> 67
+| --> 70
+-1 --> 81
+niekas_neatitiko --> 80
+
+int_const_begin // busenos numeris :  1
+0 1 2 3 4 5 6 7 8 9 --> 1
+. --> 3
+niekas_neatitiko --> 2
+
+int_const // busenos numeris :  2
+
+float_const_begin // busenos numeris :  3
+0 1 2 3 4 5 6 7 8 9 --> 4
+niekas_neatitiko --> 84
+
+float_const_next // busenos numeris :  4
+0 1 2 3 4 5 6 7 8 9 --> 4
+niekas_neatitiko --> 5
+
+float_const // busenos numeris :  5
+
+plus_begin // busenos numeris :  6
++ --> 7
+= --> 9
+niekas_neatitiko --> 11
+
+plus_plus_begin // busenos numeris :  7
+niekas_neatitiko --> 8
+
+plus_plus_op // busenos numeris :  8
+
+plus_equal_begin // busenos numeris :  9
+niekas_neatitiko --> 10
+
+plus_equal_op // busenos numeris :  10
+
+plus_op // busenos numeris :  11
+
+identifier_begin // busenos numeris :  12
+0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z --> 12
+niekas_neatitiko --> 13
+
+identifier // busenos numeris :  13
+
+left_bracket // busenos numeris :  14
+niekas_neatitiko --> 15
+
+left_bracket_delim // busenos numeris :  15
+
+right_bracket // busenos numeris :  16
+niekas_neatitiko --> 17
+
+right_bracket_delim // busenos numeris :  17
+
+l_c_bracket // busenos numeris :  18
+niekas_neatitiko --> 19
+
+l_c_bracket_delim // busenos numeris :  19
+
+r_c_bracket // busenos numeris :  20
+niekas_neatitiko --> 21
+
+r_c_bracket_delim // busenos numeris :  21
+
+l_s_bracket // busenos numeris :  22
+niekas_neatitiko --> 23
+
+l_s_bracket_delim // busenos numeris :  23
+
+r_s_bracket // busenos numeris :  24
+niekas_neatitiko --> 25
+
+r_s_bracket_delim // busenos numeris :  25
+
+comma // busenos numeris :  26
+niekas_neatitiko --> 27
+
+comma_delim // busenos numeris :  27
+
+slash // busenos numeris :  28
+* --> 29
+/ --> 73
+= --> 32
+niekas_neatitiko --> 34
+
+comment_begin // busenos numeris :  29
+NL CR space ! " # $ % & ' ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ --> 29
+* --> 30
+niekas_neatitiko --> 80
+
+comment_next // busenos numeris :  30
+/ --> 31
+* --> 30
+NL CR space ! " # $ % & ' ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ --> 29
+niekas_neatitiko --> 80
+
+comment_end // busenos numeris :  31
+niekas_neatitiko --> 0
+
+div_equal_begin // busenos numeris :  32
+niekas_neatitiko --> 33
+
+div_equal_op // busenos numeris :  33
+
+div_op // busenos numeris :  34
+
+minus // busenos numeris :  35
+- --> 36
+= --> 38
+niekas_neatitiko --> 40
+
+minus_minus // busenos numeris :  36
+niekas_neatitiko --> 37
+
+minus_minus_op // busenos numeris :  37
+
+minus_equal // busenos numeris :  38
+niekas_neatitiko --> 39
+
+minus_equal_op // busenos numeris :  39
+
+minus_op // busenos numeris :  40
+
+equal // busenos numeris :  41
+= --> 42
+niekas_neatitiko --> 44
+
+equal_equal // busenos numeris :  42
+niekas_neatitiko --> 43
+
+equal_equal_op // busenos numeris :  43
+
+equal_op // busenos numeris :  44
+
+colon // busenos numeris :  45
+niekas_neatitiko --> 46
+
+colon_delim // busenos numeris :  46
+
+not // busenos numeris :  47
+= --> 48
+niekas_neatitiko --> 50
+
+not_equal // busenos numeris :  48
+niekas_neatitiko --> 49
+
+not_equal_op // busenos numeris :  49
+
+not_op // busenos numeris :  50
+
+less // busenos numeris :  51
+= --> 52
+niekas_neatitiko --> 54
+
+less_equal // busenos numeris :  52
+niekas_neatitiko --> 53
+
+less_equal_op // busenos numeris :  53
+
+less_op // busenos numeris :  54
+
+greater // busenos numeris :  55
+= --> 56
+niekas_neatitiko --> 58
+
+greater_equal // busenos numeris :  56
+niekas_neatitiko --> 57
+
+greater_equal_op // busenos numeris :  57
+
+greater_op // busenos numeris :  58
+
+mul // busenos numeris :  59
+= --> 60
+niekas_neatitiko --> 62
+
+mul_equal // busenos numeris :  60
+niekas_neatitiko --> 61
+
+mul_equal_op // busenos numeris :  61
+
+mul_op // busenos numeris :  62
+
+mod // busenos numeris :  63
+= --> 64
+niekas_neatitiko --> 66
+
+mod_equal // busenos numeris :  64
+niekas_neatitiko --> 65
+
+mod_equal_op // busenos numeris :  65
+
+mod_op // busenos numeris :  66
+
+and // busenos numeris :  67
+& --> 68
+niekas_neatitiko --> 80
+
+and_next // busenos numeris :  68
+niekas_neatitiko --> 69
+
+and_op // busenos numeris :  69
+
+or // busenos numeris :  70
+| --> 71
+niekas_neatitiko --> 80
+
+or_next // busenos numeris :  71
+niekas_neatitiko --> 72
+
+or_op // busenos numeris :  72
+
+single_comment_begin // busenos numeris :  73
+cr -1 --> 0
+niekas_neatitiko --> 73
+
+var_array_prefix_begin // busenos numeris :  74
+$ --> 75
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z --> 77
+niekas_neatitiko --> 80
+
+array_prefix_begin // busenos numeris :  75
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z --> 76
+niekas_neatitiko --> 80
+
+array_prefix // busenos numeris :  76
+
+variable_prefix // busenos numeris :  77
+
+function_prefix_begin // busenos numeris :  78
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z --> 79
+niekas_neatitiko --> 80
+
+function_prefix // busenos numeris :  79
+
+error // busenos numeris :  80
+
+eof // busenos numeris :  81
+
+char_const_start // busenos numeris :  82
+space ! " # $ % & ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ --> 83
+niekas_neatitiko --> 80
+
+char_const_next1 // busenosnumeris :  83
+' --> 84
+niekas_neatitiko --> 80
+
+char_const_next2 // busenos numeris :  84
+niekas_neatitiko --> 85
+
+char_const // busenos numeris : 85
+
+string_const_start // busenos numeris :  86
+NL space ! # $ % & ' ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ --> 87
+" --> 88
+niekas_neatitiko --> 80
+
+string_const_next1 // busenos numeris :  87
+NL space ! # $ % & ' ( ) + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ --> 87
+" --> 88
+niekas_neatitiko --> 80
+
+string_const_next2 // busenos numeris :  88
+niekas_neatitiko --> 89
+
+string_constt // busenos numeris :  89
